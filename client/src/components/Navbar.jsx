@@ -31,7 +31,7 @@ const Navbar = () => {
 			<nav className="navbar">
 				<div className="container">
 					<div className="logo">
-						<NavLink to="/"> Heliverse Assignment </NavLink>
+						<NavLink to="/"> Heliverse - Team Management Portal </NavLink>
 					</div>
 
 					<div className="menu-icon" onClick={handleShowNavbar}>
