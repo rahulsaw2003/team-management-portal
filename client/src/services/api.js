@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const serverUrl = 'http://localhost:5000';
+const serverUrl = "http://localhost:5000";
 
 export const createUser = async(user)=>{
     try {
