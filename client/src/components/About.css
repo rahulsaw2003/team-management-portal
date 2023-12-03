@@ -1,0 +1,30 @@
+.about-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 20px;
+    margin: 40px;
+}
+
+.about-content {
+	flex: 1;
+	max-width: 600px;
+}
+
+.contact-details {
+	flex: 1;
+	max-width: 550px;
+}
+
+h2,
+h3 {
+	color: rgb(28, 24, 24);
+	font-weight: semi-bold;
+	margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+p, a {
+	color: rgb(78, 71, 71);
+    font-size: 20px;
+}

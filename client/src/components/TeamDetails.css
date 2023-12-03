@@ -1,0 +1,60 @@
+.team-details-container {
+  width: 80%;
+  margin: auto;
+}
+
+.team-details-title {
+  font-size: 30px;
+  color: rgb(18, 53, 193);
+  margin-bottom: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.team-details-section {
+  margin-bottom: 12px;
+}
+
+.team-details-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.team-details-value {
+  color: #555;
+}
+
+.members-heading {
+  font-size: 20px;
+  color: #333;
+  margin-top: 24px;
+}
+
+.members-list {
+  list-style: none;
+  padding: 0;
+}
+
+.member-item {
+  margin-bottom: 16px;
+}
+
+.member-detail-label {
+  font-weight: semi-bold;
+  margin-right: 8px;
+  color: #777;
+}
+
+.members-container {
+    margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.members-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
