@@ -8,7 +8,7 @@ import teamRouter from "./routes/teamRoutes.js";
 const app = express();
 config({path: './.env'});
 
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -25,6 +25,6 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
+app.listen(port, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 });
