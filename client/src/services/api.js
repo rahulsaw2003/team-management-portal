@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const serverUrl = "http://localhost:5000";
+const serverUrl = "https://user-management-server-kuxo.onrender.com";
 
 export const createUser = async(user)=>{
     try {

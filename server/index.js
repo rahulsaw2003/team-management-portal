@@ -19,6 +19,10 @@ app.use("/api/users", userRouter);
 // Team Routes
 app.use("/api/teams", teamRouter);
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Team Management Server");
+});
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
