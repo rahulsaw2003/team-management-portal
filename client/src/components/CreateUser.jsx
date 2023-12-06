@@ -30,6 +30,7 @@ const CreateUser = () => {
 			setUserData(defaultUser);
 			history("/");
 		} else {
+			console.log(res.data.message);
 			toast.error(res.data.message);
 		}
 	};
@@ -59,7 +60,6 @@ const CreateUser = () => {
 
 						<select className="menu" name="gender" id="gender" onChange={(e) => handleValueChange(e)} value={userData.gender}>
 							<option value="">Select Gender</option>
-							<option value="">Select Gender</option>
 							<option value="Male">Male</option>
 							<option value="Bigender">Bigender</option>
 							<option value="Genderfluid">Genderfluid</option>
@@ -73,7 +73,6 @@ const CreateUser = () => {
 					<div className="form_input">
 						<label htmlFor="domain">Domain</label>
 						<select className="menu" name="domain" id="domain" onChange={(e) => handleValueChange(e)} value={userData.domain}>
-							<option value="">Select Domain</option>
 							<option value="">Select Domain</option>
 							<option value="Business Development">Business Development</option>
 							<option value="IT">IT</option>

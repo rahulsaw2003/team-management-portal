@@ -26,12 +26,24 @@ export const getOneUser = async (req, res) => {
 };
 
 export const createUser = async (req, res) => {
-	const { id, first_name, last_name, email, gender, domain, available, avatar } = req.body;
+	const { id, first_name, last_name, email, gender, domain, available } = req.body;
 	try {
+		const maxIdUser = await User.findOne({}, { id: 1 }, { sort: { id: -1 } });
+		const newId = maxIdUser ? maxIdUser.id + 1 : 1;
+
 		const isUser = await User.findOne({ email });
 		if (isUser) return res.status(200).json({ message: "User already exists in DB!" });
 
-		const newUser = await User.create({ id, first_name, last_name, email, gender, domain, available, avatar });
+		const newUser = await User.create({
+			id: newId,
+			first_name,
+			last_name,
+			email,
+			gender,
+			domain,
+			available,
+		});
+
 		res.status(201).json({ message: "New User created successfully", newUser });
 	} catch (error) {
 		console.error("Error creating user:", error);
@@ -99,4 +111,3 @@ export const getUniqueUsers = async (req, res) => {
 		res.status(500).json({ message: "Error occurred while retrieving users!", error });
 	}
 };
-
