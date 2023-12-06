@@ -71,7 +71,7 @@ const DefineTeam = () => {
 					</div>
 
 					<button className="btn" onClick={(e) => handleClick(e)}>
-						Update
+						Create
 					</button>
 				</form>
 			</div>

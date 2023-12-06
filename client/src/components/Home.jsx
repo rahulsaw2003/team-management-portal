@@ -26,7 +26,7 @@ const Home = () => {
 
 	const getUserDetails = async () => {
 		const response = await getAllUsers();
-		console.log(response.data.users);
+		// console.log(response.data.users);
 		setItems(response.data.users);
 	};
 
@@ -81,7 +81,7 @@ const Home = () => {
 	};
 
 	const handleUpdate = (itemId) => {
-		console.log(itemId);
+		// console.log(itemId);
 		navigate(`/users/update/${itemId}`);
 	};
 

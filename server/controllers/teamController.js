@@ -3,7 +3,6 @@ import validateUniqueMembers from "../utils/validateTeam.js";
 
 export const createTeam = async (req, res) => {
 	const { name, description, memberIds } = req.body;
-	console.log(memberIds);
 	try {
 		if (!name || !description || !memberIds) {
 			return res.status(200).json({ message: "All fields are required" });
